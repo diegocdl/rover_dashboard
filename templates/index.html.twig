@@ -17,7 +17,7 @@ Midnight Blue | Turing Lab
   <div class="card" style="width: 640px; margin: 25px auto">
     {% if cameraImg %}
     <img src="imgs/{{cameraImg.filename}}" class="card-img-top" alt="..." height="480" width="640">
-    <p style="font-size: small;">Imagen actualizada el {{cameraImg.datetime.format('d/m/Y H:i:s') }}</p>
+    <p style="font-size: small;">Imagen actualizada el {{cameraImg.datetimeImg.format('d/m/Y H:i:s') }}</p>
     {% else %}
     <p style="text-align: center; margin-top: 5px">No se ha recibido ninguna imagen</p>
     {% endif %}
