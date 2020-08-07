@@ -19,7 +19,7 @@ class RoverCmdRepository extends ServiceEntityRepository
         parent::__construct($registry, RoverCmd::class);
     }
 
-    public function getLast() : RoverCmd {
+    public function getLast() {
         $entityManager = $this->getEntityManager();
 
         $query = $entityManager->createQuery(
@@ -31,7 +31,7 @@ class RoverCmdRepository extends ServiceEntityRepository
         if (sizeof($result) > 0) {
             return $result[0];
         } else {
-            return [];
+            return null;
         }
     }
 

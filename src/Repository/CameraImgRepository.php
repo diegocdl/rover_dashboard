@@ -19,7 +19,7 @@ class CameraImgRepository extends ServiceEntityRepository
         parent::__construct($registry, CameraImg::class);
     }
 
-    public function getLast() : CameraImg {
+    public function getLast() {
         $entityManager = $this->getEntityManager();
 
         $query = $entityManager->createQuery(
@@ -31,7 +31,7 @@ class CameraImgRepository extends ServiceEntityRepository
         if (sizeof($result) > 0) {
             return $result[0];
         } else {
-            return [];
+            return null;
         }
     }
 
