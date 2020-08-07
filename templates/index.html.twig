@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+<script>
+  setTimeout(function(){
+    window.location.reload(1);
+  }, 5000);
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1>Midnight Blue</h1>
+  <div class="card" style="width: 640px">
+    <img src="imgs/{{cameraImg.filename}}" class="card-img-top" alt="..." height="480" width="640">
+    <div class="card-body">
+      <p class="card-text">Ohm1: {{roverCmd.ohm1}}, Ohm2: {{roverCmd.ohm2}}, Ohm3: {{roverCmd.ohm3}}, Ohm4: {{roverCmd.ohm4}}</p>
+      <p class="card-text">Actualizado {{cameraImg.datetimeimg.format('d/m/Y H:i:s') }}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
